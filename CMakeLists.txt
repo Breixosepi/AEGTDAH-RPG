@@ -26,7 +26,7 @@ endif()
 
 # Build your app
 # ==============
-hello_imgui_add_app(hello_world_ hello_world.main.cpp)
+hello_imgui_add_app(UI UI.cpp)
 
 
 # hello_imgui_add_app is a helper function, similar to cmake's "add_executable"

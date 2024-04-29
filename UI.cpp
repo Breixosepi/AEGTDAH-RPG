@@ -2,13 +2,15 @@
 
 int main(int , char *[])
 {
-    auto guiFunction = []() {
-        ImGui::Text("olleH, ");                    // Display a simple label
-        HelloImGui::ImageFromAsset("world.jpg");   // Display a static image
-        if (ImGui::Button("Bye!"))                 // Display a button
-            // and immediately handle its action if it is clicked!
+    auto guiFunction = []() 
+    {
+        ImGui::Text("Inicio");                    
+        ImGui::Text("Cargar");                    
+        ImGui::Text("Salir");          
+        HelloImGui::ImageFromAsset("world.jpg");   
+        if (ImGui::Button("Bye!"))                 
             HelloImGui::GetRunnerParams()->appShallExit = true;
-     };
+    };
     HelloImGui::Run(guiFunction, "Hello, globe", true);
     return 0;
 }
