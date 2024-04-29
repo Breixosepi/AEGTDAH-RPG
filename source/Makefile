@@ -4,7 +4,9 @@ WARN        = -Wall -Wextra -Wcast-align -Wno-sign-compare -Wno-write-strings -W
 # Libs
 LIB         = ./lib
 INCLUDES    = $(wildcard $(LIB)/include/*.hpp)
+INCLUDES    += $(wildcard $(LIB)/include/**/*.hpp)
 SOURCES     = $(wildcard $(LIB)/src/*.cpp)
+SOURCES     += $(wildcard $(LIB)/src/**/*.cpp)
 OBJECTS     = $(SOURCES:$(LIB)/src/%.cpp=$(LIB)/obj/%.o)
 
 # Test
