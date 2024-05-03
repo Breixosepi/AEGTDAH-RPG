@@ -13,3 +13,4 @@ void aegtdahrpg::on_exitBtn_clicked()
 {
     close();
 }
+

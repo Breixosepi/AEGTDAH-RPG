@@ -1,4 +1,3 @@
-# Archivos y carpetas generados por Visual Studio
 bin/
 obj/
 Debug/
@@ -27,7 +26,13 @@ Release/
 *.lib
 *.exp
 
-# Archivos Qt Creator
 build-*
 *.pro.user
 qmlcache/
+
+*.iml
+*~
+
+.vscode/
+.idea/
+
