@@ -94,8 +94,8 @@
   <ItemGroup>
     <QtRcc Include="aegtdahrpg.qrc" />
     <QtUic Include="aegtdahrpg.ui" />
-    <QtMoc Include="aegtdahrpg.hpp" />
-    <ClCompile Include="aegtdahrpg.cpp" />
+    <QtMoc Include="UI.hpp" />
+    <ClCompile Include="UI.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

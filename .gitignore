@@ -1,0 +1,33 @@
+# Archivos y carpetas generados por Visual Studio
+bin/
+obj/
+Debug/
+Release/
+*.suo
+*.sdf
+*.db
+*.pdb
+*.ilk
+*.exe
+*.notfound
+*.idb
+*.tlog
+*.log
+*.ipch
+*.layout
+*.manifest
+*.rc
+*.user
+*.dat
+*.bkp
+*.tmp
+*.bak
+*.dll
+*.exe.manifest
+*.lib
+*.exp
+
+# Archivos Qt Creator
+build-*
+*.pro.user
+qmlcache/

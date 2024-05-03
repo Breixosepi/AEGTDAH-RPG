@@ -1,10 +1,10 @@
-#include "aegtdahrpg.hpp"
+#include "UI.hpp"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    aegtdahrpg w;
-    w.show();
-    return a.exec();
+    QApplication app(argc, argv);
+    aegtdahrpg window;
+    window.show();
+    return app.exec();
 }

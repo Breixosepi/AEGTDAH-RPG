@@ -29,10 +29,10 @@
     <QtUic Include="aegtdahrpg.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="aegtdahrpg.hpp">
+    <QtMoc Include="UI.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <ClCompile Include="aegtdahrpg.cpp">
+    <ClCompile Include="UI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

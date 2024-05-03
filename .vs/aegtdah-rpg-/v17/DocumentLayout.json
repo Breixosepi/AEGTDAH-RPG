@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC67B6B-4FC0-47D6-9742-FC1FA1604B89}|aegtdah-rpg-.vcxproj|C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\UI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0EC67B6B-4FC0-47D6-9742-FC1FA1604B89}|aegtdah-rpg-.vcxproj|solutionrelative:UI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC67B6B-4FC0-47D6-9742-FC1FA1604B89}|aegtdah-rpg-.vcxproj|C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\UI.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0EC67B6B-4FC0-47D6-9742-FC1FA1604B89}|aegtdah-rpg-.vcxproj|solutionrelative:UI.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EC67B6B-4FC0-47D6-9742-FC1FA1604B89}|aegtdah-rpg-.vcxproj|C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0EC67B6B-4FC0-47D6-9742-FC1FA1604B89}|aegtdah-rpg-.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UI.hpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\UI.hpp",
+              "RelativeDocumentMoniker": "UI.hpp",
+              "ToolTip": "C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\UI.hpp",
+              "RelativeToolTip": "UI.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-03T15:28:09.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UI.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\UI.cpp",
+              "RelativeDocumentMoniker": "UI.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\UI.cpp",
+              "RelativeToolTip": "UI.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-03T15:27:36.145Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -46,6 +85,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\source\\Repos\\aegtdah-rpg\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-03T15:26:53.665Z",
+              "EditorCaption": ""
             }
           ]
         }

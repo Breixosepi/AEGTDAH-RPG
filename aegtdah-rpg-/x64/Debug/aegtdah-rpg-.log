@@ -1,5 +1,5 @@
-﻿  aegtdahrpg.cpp
+﻿  moc UI.hpp
+  UI.cpp
   main.cpp
-  qrc_aegtdahrpg.cpp
-  moc_aegtdahrpg.cpp
-  aegtdah-rpg-.vcxproj -> C:\Users\Usuario\Source\Repos\aegtdah-rpg\x64\Debug\aegtdah-rpg-.exe
+  moc_UI.cpp
+  aegtdah-rpg-.vcxproj -> C:\Users\Usuario\source\Repos\aegtdah-rpg\x64\Debug\aegtdah-rpg-.exe
