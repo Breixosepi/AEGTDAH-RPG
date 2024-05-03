@@ -4,6 +4,7 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    app.setWindowIcon(QIcon(":/resource/image/imagenPrueba"));
     aegtdahrpg window;
     window.show();
     return app.exec();

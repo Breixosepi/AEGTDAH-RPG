@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -26,19 +25,20 @@ public:
     QPushButton *beginBtn;
     QPushButton *loadBtn;
     QPushButton *exitBtn;
-    QMenuBar *menuBar;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *aegtdahrpgClass)
     {
         if (aegtdahrpgClass->objectName().isEmpty())
             aegtdahrpgClass->setObjectName("aegtdahrpgClass");
-        aegtdahrpgClass->resize(478, 341);
+        aegtdahrpgClass->resize(606, 369);
+        aegtdahrpgClass->setMinimumSize(QSize(606, 369));
+        aegtdahrpgClass->setMaximumSize(QSize(606, 369));
         centralWidget = new QWidget(aegtdahrpgClass);
         centralWidget->setObjectName("centralWidget");
         beginBtn = new QPushButton(centralWidget);
         beginBtn->setObjectName("beginBtn");
-        beginBtn->setGeometry(QRect(250, 60, 80, 24));
+        beginBtn->setGeometry(QRect(260, 90, 80, 24));
         QFont font;
         font.setFamilies({QString::fromUtf8("Times New Roman")});
         font.setPointSize(12);
@@ -47,19 +47,15 @@ public:
         beginBtn->setContextMenuPolicy(Qt::ContextMenuPolicy::DefaultContextMenu);
         loadBtn = new QPushButton(centralWidget);
         loadBtn->setObjectName("loadBtn");
-        loadBtn->setGeometry(QRect(250, 150, 80, 24));
+        loadBtn->setGeometry(QRect(260, 170, 80, 24));
         loadBtn->setFont(font);
         loadBtn->setContextMenuPolicy(Qt::ContextMenuPolicy::DefaultContextMenu);
         exitBtn = new QPushButton(centralWidget);
         exitBtn->setObjectName("exitBtn");
-        exitBtn->setGeometry(QRect(250, 240, 80, 24));
+        exitBtn->setGeometry(QRect(260, 260, 80, 24));
         exitBtn->setFont(font);
         exitBtn->setContextMenuPolicy(Qt::ContextMenuPolicy::DefaultContextMenu);
         aegtdahrpgClass->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(aegtdahrpgClass);
-        menuBar->setObjectName("menuBar");
-        menuBar->setGeometry(QRect(0, 0, 478, 21));
-        aegtdahrpgClass->setMenuBar(menuBar);
         statusBar = new QStatusBar(aegtdahrpgClass);
         statusBar->setObjectName("statusBar");
         aegtdahrpgClass->setStatusBar(statusBar);
