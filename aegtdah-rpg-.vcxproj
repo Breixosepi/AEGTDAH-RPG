@@ -92,11 +92,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Widget.cpp" />
     <QtRcc Include="aegtdahrpg.qrc" />
     <QtUic Include="aegtdahrpg.ui" />
     <QtMoc Include="UI.hpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="Widget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Widget.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

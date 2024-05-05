@@ -10,6 +10,12 @@
     <height>369</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="minimumSize">
    <size>
     <width>606</width>
@@ -46,7 +52,7 @@
        <cursorShape>ArrowCursor</cursorShape>
       </property>
       <property name="contextMenuPolicy">
-       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+       <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="text">
        <string>Inicio</string>
@@ -69,7 +75,7 @@
        </font>
       </property>
       <property name="contextMenuPolicy">
-       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+       <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="text">
        <string>Cargar</string>
@@ -86,7 +92,7 @@
        </font>
       </property>
       <property name="contextMenuPolicy">
-       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+       <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="text">
        <string>Salir</string>
