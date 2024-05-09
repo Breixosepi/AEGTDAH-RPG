@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/aegtdahrpg"/>
-    <qresource prefix="/">
-        <file>resource/image/imagenPrueba.ico</file>
-    </qresource>
-</RCC>
