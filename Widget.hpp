@@ -2,6 +2,7 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_Widget.h"
+#include <QkeyEvent>
 
 class Widget : public QMainWindow
 {
@@ -12,7 +13,15 @@ public:
     ~Widget();
 private slots:
     void on_returnBtn_clicked();
+    void keyPressEvent(QKeyEvent* event);
 
 private:
+
     Ui::Widget ui;
+    QPixmap state;
+    QPixmap left;
+    QPixmap right;
+    QPixmap up;
+    QPixmap down;
+
 };

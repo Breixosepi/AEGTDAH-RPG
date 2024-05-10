@@ -3,6 +3,10 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_aegtdahrpg.h"
 #include <QGraphicsRectItem>
+#include "Widget.hpp"
+#include <QPixmap> 
+#include <QKeyEvent>
+
 
 class aegtdahrpg : public QMainWindow
 {
@@ -14,9 +18,10 @@ public:
 private slots:
     void on_exitBtn_clicked();
     void on_loadBtn_clicked();
-    void KeyPressEvent(QKeyEvent* event);
+    void keyPressEvent(QKeyEvent* event);
 
 
 private:
     Ui::aegtdahrpgClass ui;
+    Widget* widget;
 };
