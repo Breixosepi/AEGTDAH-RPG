@@ -4,35 +4,15 @@
 class Hp
 {
 public:
-	bool setMaxHP(hptype new_max_hp) 
-	{
-		if (new_max_hp < 1)	return false;
-		MaxHp = new_max_hp;
-		if (CurrentHp > MaxHp)	CurrentHp = MaxHp;
-		return true;
-	}
-	void takeDamage(hptype damage)
-	{
-		if (damage > CurrentHp)
-		{
-			CurrentHp = 0;
-			return;
-		} 
-		CurrentHp -= damage;
-	}
+	bool setMaxHp(hptype new_max_hp);
+	void takeDamage(hptype damage);
+	void healing(hptype amount);
+	hptype getMaxHp();
+	hptype getCurrentHp();
 	Hp();
-	~Hp();
+	Hp(hptype _currentHp, hptype _maxHp);
 
 private:
-	hptype CurrentHp;
-	hptype MaxHp;
-	hptype shield;
+	hptype currentHp;
+	hptype maxHp;
 };
-
-Hp::Hp()
-{
-}
-
-Hp::~Hp()
-{
-}
