@@ -93,6 +93,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="pj.cpp" />
+    <ClCompile Include="source\lib\src\Hp.cpp" />
+    <ClCompile Include="source\lib\src\Inventory.cpp" />
+    <ClCompile Include="source\lib\src\LevelUp.cpp" />
+    <ClCompile Include="source\lib\src\Logic.cpp" />
+    <ClCompile Include="source\lib\src\Player.cpp" />
+    <ClCompile Include="source\lib\src\Stats.cpp" />
+    <ClCompile Include="source\lib\src\Utilities.cpp" />
     <ClCompile Include="Widget.cpp" />
     <QtRcc Include="aegtdahrpg.qrc" />
     <QtUic Include="aegtdahrpg.ui" />
@@ -106,9 +113,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pj.hpp" />
+    <ClInclude Include="source\lib\include\Hp.hpp" />
+    <ClInclude Include="source\lib\include\Inventory.hpp" />
+    <ClInclude Include="source\lib\include\LevelUp.hpp" />
+    <ClInclude Include="source\lib\include\Logic.hpp" />
+    <ClInclude Include="source\lib\include\Player.hpp" />
+    <ClInclude Include="source\lib\include\Stats.hpp" />
+    <ClInclude Include="source\lib\include\Utilities.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resource\Sounds\CancionCorta.mp3" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

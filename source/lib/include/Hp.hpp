@@ -15,4 +15,8 @@ public:
 private:
 	hptype currentHp;
 	hptype maxHp;
+protected:
+	void HpUp(hptype c, hptype m);
 };
+
+

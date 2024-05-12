@@ -44,6 +44,12 @@ Hp::Hp(hptype _currentHp, hptype _maxHp)
 	if (currentHp > maxHp) currentHp = maxHp;
 
 }
+
+void Hp::HpUp(hptype c, hptype m)
+{
+	currentHp += c;
+	maxHp += m;
+}
 	
 hptype Hp::getMaxHp()	{ return maxHp;}
 

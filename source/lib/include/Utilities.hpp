@@ -1,7 +1,7 @@
 #pragma once 
 #include <cstdint>
 
-typedef std::uint16_t hptype;
-typedef std::uint16_t statstype;
-typedef std::uint16_t xptype;
-typedef std::uint16_t lvltype;
+using hptype = std::uint16_t;
+using statstype = std::uint16_t;
+using xptype = std::uint16_t;
+using lvltype = std::uint16_t ;
