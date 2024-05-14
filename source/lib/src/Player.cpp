@@ -1,4 +1,5 @@
 #include "../include/Player.hpp"
+#include "../include/Inventory.hpp"
 
 SelectPlayer::SelectPlayer(): Hp(), Stats(), LevelUp()
 {
@@ -71,6 +72,15 @@ void Player::increaseStrength(statstype amt)	{ playerCharacter->increaseStrength
 
 void Player::increaseMana(statstype amt)	{ playerCharacter->increaseMana(amt);}
 
+void Player::printInventory()
+{
+	if (inventory == nullptr)	return;
+	else
+	{
+		std::cout << "no esta vacio"<<std::endl;
+		inventory->printInventory();
+	}
+}
 
 std::string Elf::getClassName()	{ return std::string("Elf");}
 

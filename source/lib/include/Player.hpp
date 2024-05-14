@@ -3,7 +3,8 @@
 #include "Hp.hpp"
 #include "LevelUp.hpp"
 #include <string>
-#include "Inventory.hpp"
+
+class Inventory;
 
 class SelectPlayer : public Hp, public Stats, public LevelUp
 {
@@ -84,7 +85,9 @@ public:
 	void heal(hptype amt);
 	void increaseStrength(statstype amt);
 	void increaseMana(statstype amt);
+	void printInventory();
 		
 private:
 	SelectPlayer* playerCharacter;
+	Inventory* inventory;
 };

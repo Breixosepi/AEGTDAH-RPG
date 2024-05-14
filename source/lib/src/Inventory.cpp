@@ -31,7 +31,7 @@ void Inventory::removeItem(const Item& item, int amount)
 
 void Inventory::printInventory()
 {
-    for (const auto& pair: items) 
+    for (auto& pair: items) 
     {
         std::cout << "Item: " << pair.first.GetName() << " tipo: " << (int)pair.first.GetType() << std::endl;
         std::cout << " Description: " << pair.first.GetDescription()<< std::endl;

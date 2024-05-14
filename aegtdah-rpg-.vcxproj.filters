@@ -67,6 +67,9 @@
     <ClCompile Include="source\lib\src\Utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\lib\src\Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="Widget.ui">
@@ -101,6 +104,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\lib\include\Utilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lib\include\Item.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

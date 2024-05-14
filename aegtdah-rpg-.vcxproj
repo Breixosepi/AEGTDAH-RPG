@@ -95,6 +95,7 @@
     <ClCompile Include="pj.cpp" />
     <ClCompile Include="source\lib\src\Hp.cpp" />
     <ClCompile Include="source\lib\src\Inventory.cpp" />
+    <ClCompile Include="source\lib\src\Item.cpp" />
     <ClCompile Include="source\lib\src\LevelUp.cpp" />
     <ClCompile Include="source\lib\src\Logic.cpp" />
     <ClCompile Include="source\lib\src\Player.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="pj.hpp" />
     <ClInclude Include="source\lib\include\Hp.hpp" />
     <ClInclude Include="source\lib\include\Inventory.hpp" />
+    <ClInclude Include="source\lib\include\Item.hpp" />
     <ClInclude Include="source\lib\include\LevelUp.hpp" />
     <ClInclude Include="source\lib\include\Logic.hpp" />
     <ClInclude Include="source\lib\include\Player.hpp" />

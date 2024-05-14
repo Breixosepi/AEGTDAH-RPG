@@ -2,7 +2,8 @@
 #include <QtWidgets/QApplication>
 #include <QGraphicsScene>
 #include <QGraphicsView>
-#include <pj.hpp>
+#include "pj.hpp"
+#include "source/lib/include/Item.hpp"
 
 int main(int argc, char* argv[])
 {
