@@ -32,17 +32,8 @@ void LevelUp::CheckLevelUp()
 
 }
 
-xptype LevelUp::GetXp()
-{
-	return currentXp;
-}
+xptype LevelUp::GetXp(){ return currentXp ;}
 
-lvltype LevelUp::GetLvl()
-{
-	return currentLvl;
-}
+lvltype LevelUp::GetLvl(){ return currentLvl ;}
 
-xptype LevelUp::GetXptoNextLevel()
-{
-	return xpToNextLevel;
-}
+xptype LevelUp::GetXptoNextLevel() { return xpToNextLevel ;}
