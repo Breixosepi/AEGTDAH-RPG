@@ -38,3 +38,5 @@ private:
 	int x, y;
 };
 
+void Menu();
+

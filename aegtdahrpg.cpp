@@ -6,6 +6,11 @@
 
 int main()
 {
+    Menu();
+   /* Printpj pj(10,10);
+    pj.printPj();
+    pj.CursorHide();
+    pj.printLimit();
 
 }
 
