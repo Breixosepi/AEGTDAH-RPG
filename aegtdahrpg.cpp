@@ -6,17 +6,6 @@
 
 int main()
 {
-    //Menu();
-    Printpj pj(10,10);
-    pj.printPj();
-    pj.CursorHide();
-    pj.printLimit();
-
-    bool gameOver = false;
-    while (!gameOver)
-    {
-        pj.movePj();
-        Sleep(30);
-    }
+    Menu();
 
 }

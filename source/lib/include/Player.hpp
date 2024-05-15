@@ -86,6 +86,7 @@ public:
 	void increaseStrength(statstype amt);
 	void increaseMana(statstype amt);
 	void printInventory();
+	void printClass();
 		
 private:
 	SelectPlayer* playerCharacter;

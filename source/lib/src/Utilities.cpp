@@ -1,13 +1,33 @@
 #include "../include/Utilities.hpp"
 #include <iostream>
+#include <string>
+#include <sstream>
+#include "../include/Player.hpp"
 
 void NuevaPartida();
-void CargarPartida();
-
-void Caballero();
-void Mago();
-void Elfo();
-
+void Print()
+{
+    Printpj pj(10, 10);
+    pj.printPj();
+    pj.CursorHide();
+    pj.printLimit();
+    bool gameOver = false; 
+    char tecla; 
+    while (!gameOver)
+    {
+        tecla = _getch();
+        if (_kbhit)
+        {
+            if (tecla == escape)
+            {
+                system("cls");
+                break;
+            }
+        }
+        pj.movePj();
+        Sleep(30);
+    }
+}
 Printpj::Printpj(int _x, int _y)
 {
     x = _x;
@@ -96,36 +116,49 @@ void Printpj::printLimit()
     Gotoxy(130, 33); printf("%c", 188);
 }
 
+static int get_int(void) 
+{
+    int n = 0;
+
+    std::cout << "\n\tIngrese una opcion: ";
+    std::string ingresado;
+    std::getline(std::cin, ingresado); 
+    std::stringstream ss(ingresado);
+
+    if (ss >> n)    return n;
+
+    std::cout << "\n\tOpcion invalida. Por favor, seleccione una opcion valida." << std::endl;
+    return get_int();
+}
+
 void Menu() 
 {
     
-    int opcion;
+    int opcion = 0;
     
     do
     {
-        /*system("cls");*/
-
         std::cout << "\n\n\tMENU PRINCIPAL" << std::endl;
         std::cout << "\t--------------" << std::endl;
         std::cout << "\n\t1. Nueva Partida" << std::endl;
         std::cout << "\t2. SALIR" << std::endl;
-
-        std::cout << "\n\tIngrese una opcion: ";
-        std::cin >> opcion;
-
+        opcion = get_int();
         switch (opcion)
         {
         case 1:
+            system("cls");
             NuevaPartida();
             break;
 
         case 2:
+            system("cls");
             std::cout << "\n\tSaliendo del programa..." << std::endl;
-            break;
+            _getch();
+            return;
 
         default:
+            system("cls");
             std::cout << "\n\tOpcion invalida. Por favor, seleccione una opcion valida." << std::endl;
-        
         }
     } while (opcion != 2);
 }
@@ -133,10 +166,12 @@ void Menu()
 void NuevaPartida()
 {
     int opcion;
+    Player knight(new Warrior());
+    Player mage(new Mage());
+    Player elf(new Elf());
     
     do
     {
-        /*system("cls");*/
 
         std::cout << "\n\n\t\t\tELIJA UN PERSONAJE" << std::endl;
         std::cout << "\t\t\t------------------------" << std::endl;
@@ -145,33 +180,39 @@ void NuevaPartida()
         std::cout << "\t3. Elfo" << std::endl;
         std::cout << "\t4. Volver al Menu Principal" << std::endl;
 
-        std::cout << "\n\tIngrese una opcion: ";
-        std::cin >> opcion;
-
+        opcion = get_int();
         switch (opcion)
         {
         case 1:
-            /*Caballero()*/;
+            system("cls");
+            knight.printClass();
+            Print();
             break;
-
         case 2:
-            /*Mago()*/;
+            system("cls");
+            mage.printClass();
+            Print();
             break;
 
         case 3:
-            /*Elfo()*/;
+            system("cls");
+            elf.printClass();
+            Print();
             break;
 
         case 4:
+            system("cls");
             Menu();
             break;
 
         default:
+            system("cls");
             std::cout << "\n\tOpcion invalida. Por favor, seleccione una opcion valida." << std::endl;
 
         }
     } while (opcion != 4);
 }
+
 
 
 

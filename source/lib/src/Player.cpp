@@ -82,6 +82,23 @@ void Player::printInventory()
 	}
 }
 
+void Player::printClass()
+{
+	Printpj stats(2,20);
+	stats.Gotoxy(115, 2);
+	std::cout << "Raza: " << playerCharacter->getClassName() << std::endl;
+	playerCharacter->getCurrentHp();
+	playerCharacter->getMaxHp();
+	playerCharacter->getStrength();
+	playerCharacter->getAgility();
+	playerCharacter->getArmor();
+	playerCharacter->getIntelligence();
+	playerCharacter->getMana();
+	playerCharacter->GetLvl();
+	playerCharacter->GetXp();
+	playerCharacter->GetXptoNextLevel();
+}
+
 std::string Elf::getClassName()	{ return std::string("Elf");}
 
 Elf::Elf()

@@ -3,8 +3,8 @@
 #include <windows.h>
 #include <conio.h>
 #include <stdio.h>
-//#include <graphics.h>
 
+class Player;
 using hptype = std::uint16_t;
 using statstype = std::uint16_t;
 using xptype = std::uint16_t;
@@ -14,6 +14,7 @@ static constexpr char left = 75;
 static constexpr char right = 77;
 static constexpr char down = 80;
 static constexpr char up = 72;
+static constexpr char escape = 27;
 
 enum class ItemType
 {
@@ -33,7 +34,6 @@ public:
 	void cleanPj();
 	void movePj();
 	void printLimit();
-
 private:
 	int x, y;
 };
