@@ -1,4 +1,7 @@
 #include "Widget.hpp"
+#include "UI.hpp"
+
+aegtdahrpg* homeScreen;
 
 Widget::Widget(QWidget* parent)
     : QMainWindow(parent)
@@ -42,5 +45,7 @@ void Widget::keyPressEvent(QKeyEvent * event)
 
 void Widget::on_returnBtn_clicked()
 {
-    close();
+    this->close();
+    homeScreen = new aegtdahrpg(this);
+    homeScreen->showFullScreen();
 }

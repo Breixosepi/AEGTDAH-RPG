@@ -12,7 +12,7 @@ aegtdahrpg::~aegtdahrpg()
 
 void aegtdahrpg::on_exitBtn_clicked()
 {
-    close();
+    this->close();
 }
 
 void aegtdahrpg::on_loadBtn_clicked()
