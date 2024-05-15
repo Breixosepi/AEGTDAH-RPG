@@ -33,6 +33,7 @@ void Inventory::printInventory()
 {
     for (auto& pair: items) 
     {
+        std::cout<<""<<std::endl;
         std::cout << "Item: " << pair.first.GetName() << " tipo: " << (int)pair.first.GetType() << std::endl;
         std::cout << " Description: " << pair.first.GetDescription()<< std::endl;
         std::cout << "Cantidad: " << pair.second << std::endl;
