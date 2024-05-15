@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -32,6 +32,12 @@
    <string>aegtdahrpg</string>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QPushButton" name="beginBtn">
     <property name="geometry">
      <rect>
@@ -120,13 +126,22 @@
     </property>
    </widget>
    <widget class="QLabel" name="pjLbl">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>10</y>
-      <width>521</width>
-      <height>311</height>
+      <x>40</x>
+      <y>0</y>
+      <width>571</width>
+      <height>371</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="text">
      <string/>
@@ -135,7 +150,7 @@
      <pixmap resource="aegtdahrpg.qrc">:/resource/image/imagenPrueba.ico</pixmap>
     </property>
     <property name="scaledContents">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="openExternalLinks">
      <bool>false</bool>
@@ -146,7 +161,6 @@
    <zorder>loadBtn</zorder>
    <zorder>exitBtn</zorder>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

@@ -14,7 +14,7 @@ Widget::~Widget()
 
 void Widget::keyPressEvent(QKeyEvent * event)
 {
-    if (event->key() == Qt::Key_A)
+    /*if (event->key() == Qt::Key_A)
     {
         int x = ui.pjLbl->x();
         int y = ui.pjLbl->y();
@@ -40,7 +40,7 @@ void Widget::keyPressEvent(QKeyEvent * event)
         int x = ui.pjLbl->x();
         int y = ui.pjLbl->y();
         ui.pjLbl->move(QPoint(x, y - 3));
-    }
+    }*/
 }
 
 void Widget::on_returnBtn_clicked()

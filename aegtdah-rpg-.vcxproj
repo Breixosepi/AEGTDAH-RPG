@@ -107,6 +107,9 @@
     <QtMoc Include="UI.hpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="Game.ui" />
+    <QtUic Include="Inventory.ui" />
+    <QtUic Include="Menu.ui" />
     <QtUic Include="Widget.ui" />
   </ItemGroup>
   <ItemGroup>

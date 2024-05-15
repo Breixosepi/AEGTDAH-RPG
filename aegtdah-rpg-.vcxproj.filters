@@ -75,6 +75,15 @@
     <QtUic Include="Widget.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="Game.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Menu.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Inventory.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Widget.hpp">
