@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="aegtdahrpg.cpp" />
     <ClCompile Include="source\lib\src\Ability.cpp" />
+    <ClCompile Include="source\lib\src\Enemy.cpp" />
     <ClCompile Include="source\lib\src\Hp.cpp" />
     <ClCompile Include="source\lib\src\Inventory.cpp" />
     <ClCompile Include="source\lib\src\Item.cpp" />
@@ -141,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\lib\include\Ability.hpp" />
+    <ClInclude Include="source\lib\include\Enemy.hpp" />
     <ClInclude Include="source\lib\include\Hp.hpp" />
     <ClInclude Include="source\lib\include\Inventory.hpp" />
     <ClInclude Include="source\lib\include\Item.hpp" />
@@ -149,6 +151,9 @@
     <ClInclude Include="source\lib\include\Player.hpp" />
     <ClInclude Include="source\lib\include\Stats.hpp" />
     <ClInclude Include="source\lib\include\Utilities.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

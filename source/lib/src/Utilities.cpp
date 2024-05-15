@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include "../include/Player.hpp"
+#include "../include/Enemy.hpp"
 
 void NuevaPartida();
 void Print()
@@ -88,7 +89,7 @@ void Printpj::movePj()
         char tecla = _getch();
         printPj();
         if (tecla == left && x > 3)   --x;
-        if (tecla == right && x < 123)   ++x;
+        if (tecla == right && x < 92)   ++x;
         if (tecla == up && y > 5 )   --y;
         if (tecla == down && y < 28)   ++y;
     }
@@ -96,7 +97,7 @@ void Printpj::movePj()
 
 void Printpj::printLimit()
 {
-    for (int i = 2; i < 162; i++)
+    for (int i = 2; i < 130; i++)
     {
         Gotoxy(i, 3);   printf("%c", 205);
         Gotoxy(i, 33);  printf("%c", 205);
@@ -104,16 +105,16 @@ void Printpj::printLimit()
     for (int i = 4; i < 33; i++)
     {
         Gotoxy(2, i);   printf("%c", 186);
-        Gotoxy(130, i); printf("%c", 186);
-        Gotoxy(162,i);  printf("%c",186);
+        Gotoxy(98, i); printf("%c", 186);
+        Gotoxy(130,i);  printf("%c",186);
     }
 
     Gotoxy(2, 3);   printf("%c", 201);
     Gotoxy(2, 33);  printf("%c", 200);
-    Gotoxy(130, 3); printf("%c", 203);
-    Gotoxy(130, 33);printf("%c", 202);
-    Gotoxy(162, 3); printf("%c", 187);
-    Gotoxy(162, 33); printf("%c", 188);
+    Gotoxy(98, 3); printf("%c", 203);
+    Gotoxy(98, 33);printf("%c", 202);
+    Gotoxy(130, 3); printf("%c", 187);
+    Gotoxy(130, 33); printf("%c", 188);
 }
 
 static int get_int(void) 
@@ -165,10 +166,13 @@ void Menu()
 
 void NuevaPartida()
 {
+    int x = rand() % 130 + 3, y = rand() % 33 + 2;
     int opcion;
     Player knight(new Warrior());
     Player mage(new Mage());
     Player elf(new Elf());
+    Enemy enemy;
+    
     
     do
     {
@@ -186,23 +190,25 @@ void NuevaPartida()
         case 1:
             system("cls");
             knight.printClass();
+            enemy.print();
             Print();
             break;
         case 2:
             system("cls");
             mage.printClass();
+            enemy.print();
             Print();
             break;
 
         case 3:
             system("cls");
             elf.printClass();
+            enemy.print();  
             Print();
             break;
 
         case 4:
             system("cls");
-            Menu();
             break;
 
         default:
