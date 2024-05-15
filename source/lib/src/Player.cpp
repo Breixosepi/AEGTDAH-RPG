@@ -87,16 +87,28 @@ void Player::printClass()
 	Printpj stats(2,20);
 	stats.Gotoxy(115, 2);
 	std::cout << "Raza: " << playerCharacter->getClassName() << std::endl;
-	playerCharacter->getCurrentHp();
-	playerCharacter->getMaxHp();
-	playerCharacter->getStrength();
-	playerCharacter->getAgility();
-	playerCharacter->getArmor();
-	playerCharacter->getIntelligence();
-	playerCharacter->getMana();
-	playerCharacter->GetLvl();
-	playerCharacter->GetXp();
-	playerCharacter->GetXptoNextLevel();
+	stats.Gotoxy(138, 2);
+	std::cout << "ESTADISTICAS: " << std::endl;
+	stats.Gotoxy(135, 5);
+	std::cout << "Vida actual: " << playerCharacter->getCurrentHp() << std::endl;
+	stats.Gotoxy(135, 8);
+	std::cout << "Vida maxima: " << playerCharacter->getMaxHp() << std::endl;
+	stats.Gotoxy(135, 11);
+	std::cout << "Fuerza: " << playerCharacter->getStrength() << std::endl;
+	stats.Gotoxy(135, 14);
+	std::cout << "Agilidad: " << playerCharacter->getAgility() << std::endl;
+	stats.Gotoxy(135, 17);
+	std::cout << "Armadura: " << playerCharacter->getArmor() << std::endl;
+	stats.Gotoxy(135, 20);
+	std::cout << "Inteligencia: " << playerCharacter->getIntelligence() << std::endl;
+	stats.Gotoxy(135, 23);
+	std::cout << "Mana: " << playerCharacter->getMana() << std::endl;
+	stats.Gotoxy(135, 26);
+	std::cout << "Nivel: " << playerCharacter->GetLvl() << std::endl;
+	stats.Gotoxy(135, 29);
+	std::cout << "Experiencia actual: " << playerCharacter->GetXp() << std::endl;
+	stats.Gotoxy(135, 32);
+	std::cout << "Experiencia necesaria: " << playerCharacter->GetXptoNextLevel() << std::endl;
 }
 
 std::string Elf::getClassName()	{ return std::string("Elf");}

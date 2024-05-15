@@ -96,24 +96,24 @@ void Printpj::movePj()
 
 void Printpj::printLimit()
 {
-    for (int i = 2; i < 130; i++)
+    for (int i = 2; i < 162; i++)
     {
-        Gotoxy(i, 3);
-        printf("%c", 205);
-        Gotoxy(i, 33);
-        printf("%c", 205);
+        Gotoxy(i, 3);   printf("%c", 205);
+        Gotoxy(i, 33);  printf("%c", 205);
     }
     for (int i = 4; i < 33; i++)
     {
-        Gotoxy(2, i);
-        printf("%c", 186);
-        Gotoxy(130, i);
-        printf("%c", 186);
+        Gotoxy(2, i);   printf("%c", 186);
+        Gotoxy(130, i); printf("%c", 186);
+        Gotoxy(162,i);  printf("%c",186);
     }
-    Gotoxy(2, 3); printf("%c", 201);
-    Gotoxy(2, 33); printf("%c", 200);
-    Gotoxy(130, 3); printf("%c", 187);
-    Gotoxy(130, 33); printf("%c", 188);
+
+    Gotoxy(2, 3);   printf("%c", 201);
+    Gotoxy(2, 33);  printf("%c", 200);
+    Gotoxy(130, 3); printf("%c", 203);
+    Gotoxy(130, 33);printf("%c", 202);
+    Gotoxy(162, 3); printf("%c", 187);
+    Gotoxy(162, 33); printf("%c", 188);
 }
 
 static int get_int(void) 
@@ -131,11 +131,11 @@ static int get_int(void)
     return get_int();
 }
 
-void Menu() 
+void Menu()
 {
-    
+
     int opcion = 0;
-    
+
     do
     {
         std::cout << "\n\n\tMENU PRINCIPAL" << std::endl;
