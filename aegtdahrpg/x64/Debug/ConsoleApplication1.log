@@ -1,2 +1,11 @@
 ﻿  aegtdahrpg.cpp
+  Ability.cpp
+  Hp.cpp
+  Inventory.cpp
+  Item.cpp
+  LevelUp.cpp
+  Player.cpp
+  Stats.cpp
+  Utilities.cpp
+  Generando código...
   ConsoleApplication1.vcxproj -> C:\Users\Usuario\source\Repos\aegtdah-rpg\x64\Debug\aegtdahrpg.exe
