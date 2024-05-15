@@ -5,7 +5,8 @@
 
 int main()
 {
-    Printpj pj(10,10);
+    Menu();
+   /* Printpj pj(10,10);
     pj.printPj();
     pj.CursorHide();
     pj.printLimit();
@@ -15,5 +16,5 @@ int main()
     {
         pj.movePj();
         Sleep(30);
-    }
+    }*/
 }
