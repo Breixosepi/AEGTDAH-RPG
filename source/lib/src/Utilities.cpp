@@ -60,10 +60,10 @@ void Printpj::movePj()
     {
         char tecla = _getch();
         printPj();
-        if (tecla == left)   --x;
-        if (tecla == right)   ++x;
-        if (tecla == up)   --y;
-        if (tecla == down)   ++y;
+        if (tecla == left && x > 3)   --x;
+        if (tecla == right && x < 123)   ++x;
+        if (tecla == up && y > 5 )   --y;
+        if (tecla == down && y < 28)   ++y;
     }
 }
 
@@ -73,10 +73,10 @@ void Printpj::printLimit()
     {
         Gotoxy(i, 3);
         printf("%c", 205);
-        Gotoxy(i, 50);
+        Gotoxy(i, 33);
         printf("%c", 205);
     }
-    for (int i = 4; i < 50; i++)
+    for (int i = 4; i < 33; i++)
     {
         Gotoxy(2, i);
         printf("%c", 186);
@@ -84,7 +84,7 @@ void Printpj::printLimit()
         printf("%c", 186);
     }
     Gotoxy(2, 3); printf("%c", 201);
-    Gotoxy(2, 50); printf("%c", 200);
+    Gotoxy(2, 33); printf("%c", 200);
     Gotoxy(130, 3); printf("%c", 187);
-    Gotoxy(130, 50); printf("%c", 188);
+    Gotoxy(130, 33); printf("%c", 188);
 }
