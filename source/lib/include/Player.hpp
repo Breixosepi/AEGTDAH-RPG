@@ -19,8 +19,8 @@ private:
 class Warrior : public SelectPlayer
 {
 public:
-	static const hptype hpWarrior = (hptype)20u;
-	static const statstype strWarrior = (statstype)10u;
+	static const hptype hpWarrior = (hptype)10u;
+	static const statstype strWarrior = (statstype)4u;
 	static const statstype intWarrior = (statstype)2u;
 	static const statstype agiWarrior = (statstype)3u;
 	static const statstype armWarrior = (statstype)4u;
@@ -35,12 +35,12 @@ private:
 class Mage : public SelectPlayer
 {
 public:
-	static const hptype hpMage = (hptype)10u;
+	static const hptype hpMage = (hptype)7u;
 	static const statstype strMage = (statstype)2u;
-	static const statstype intMage = (statstype)5u;
+	static const statstype intMage = (statstype)10u;
 	static const statstype agiMage = (statstype)2u;
 	static const statstype armMage = (statstype)2u;
-	static const statstype manMage= (statstype)8u;
+	static const statstype manMage= (statstype)9u;
 	std::string getClassName() override;
 	Mage();
 private:
@@ -51,9 +51,9 @@ private:
 class Elf : public SelectPlayer
 {
 public:
-	static const hptype hpElf = (hptype)15;
-	static const statstype strElf = (statstype)5;
-	static const statstype intElf = (statstype)3;
+	static const hptype hpElf = (hptype)8;
+	static const statstype strElf = (statstype)3;
+	static const statstype intElf = (statstype)5;
 	static const statstype agiElf = (statstype)5;
 	static const statstype armElf = (statstype)2u;
 	static const statstype manElf = (statstype)5u;

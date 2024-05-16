@@ -9,6 +9,11 @@
 
 void NuevaPartida();
 bool IsColliding(std::pair<int,int>player, std::pair<int, int>enemy);
+void clear()
+{
+    Printpj screen(10,10);
+    screen.Gotoxy(3,35);
+}
 void Print(Player &player)
 {
 
@@ -28,6 +33,10 @@ void Print(Player &player)
     inven.addItem(item2);
     inven.addItem(item3);
     inven.addItem(item4);
+    int item1_amount = 1;
+    int item2_amount = 1;
+    int item3_amount = 1;
+    int item4_amount = 1;
     pj.Gotoxy(3,35);
     inven.printInventory();
     pj.printLimit();
@@ -138,6 +147,7 @@ void Print(Player &player)
                     isPlayerTurn = false;
                     inCombat = (enemy.getCurrentHp() > 0 && player.getCurrentHP() > 0);
                     player.printClass();
+                    clear();
                     pj.Gotoxy(3, 35);
                     inven.printInventory();
 
