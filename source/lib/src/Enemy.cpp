@@ -3,7 +3,7 @@
 
 void Enemy::atack(Player& play)
 {
-	play.takeDamage((rand() % 4) + 1);
+	play.takeDamage((rand() % 3) + 1);
 }
 
 void Enemy::print()

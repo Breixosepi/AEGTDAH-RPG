@@ -131,7 +131,7 @@ void Print(Player &player)
                         }
                         else
                         {
-                            enemy.takeDamage((rand() % player.getIntellect()) + 1);
+                            enemy.takeDamage((player.getIntellect() / 2) + 1);
                             player.increaseMana(-3);
                         }
                     }
