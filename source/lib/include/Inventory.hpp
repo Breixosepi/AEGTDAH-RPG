@@ -13,6 +13,8 @@ public:
 	void addItem(const Item& item, int amount = 1);
 
 	void removeItem(const Item& item, int amount = 1);
+	
+	int getItemAmount(Item& item);
 
 	void printInventory();
 

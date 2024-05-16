@@ -4,13 +4,32 @@
 #include <sstream>
 #include "../include/Player.hpp"
 #include "../include/Enemy.hpp"
+#include "../include/Item.hpp"
+#include "../include/Inventory.hpp"
 
 void NuevaPartida();
-void Print()
+bool IsColliding(std::pair<int,int>player, std::pair<int, int>enemy);
+void Print(Player &player)
 {
+
+    int x = rand() % 90 + 3;
+    int y = rand() % 25 + 4;
+    Enemy enemy(x,y);
     Printpj pj(10, 10);
     pj.printPj();
     pj.CursorHide();
+    enemy.print();
+    Inventory inven;
+    Item item1("Explosivo"," 4 damage",ItemType::Explosive);
+    Item item2("Pocion de vida","Hp + 4",ItemType::HpPotion);
+    Item item3("Pocion de mana","Mana + 2",ItemType::MpPotion);
+    Item item4("Pocion de fuerza", "Fuerza + 2", ItemType::StrPotion);
+    inven.addItem(item1);
+    inven.addItem(item2);
+    inven.addItem(item3);
+    inven.addItem(item4);
+    pj.Gotoxy(3,35);
+    inven.printInventory();
     pj.printLimit();
     bool gameOver = false; 
     char tecla; 
@@ -26,6 +45,118 @@ void Print()
             }
         }
         pj.movePj();
+        if (IsColliding(pj.GetCoordinates(), enemy.Getcoordinate()))
+        {
+            pj.printPj(3,28);
+            enemy.print(92,5);
+            bool inCombat = (enemy.getCurrentHp()>0 && player.getCurrentHP()>0);
+            bool isPlayerTurn = true;
+            while (inCombat)
+            {
+                if (!isPlayerTurn)
+                {
+                    enemy.atack(player);
+                    isPlayerTurn = true;
+                    player.printClass();
+                    inCombat = (enemy.getCurrentHp() > 0 && player.getCurrentHP() > 0);
+                    continue;
+                }
+                tecla = _getch();
+                if (_kbhit)
+                {
+                    if (tecla == '1') // explosion
+                    {
+                        if (inven.getItemAmount(item1) == 0)
+                        {
+                            enemy.takeDamage((rand() % player.getStrength()) + 1);
+                        }
+                        else
+                        {
+                            item1.Consume(player);
+                            inven.removeItem(item1, 1);
+                            enemy.takeDamage(15);
+                        }
+                        
+                    }
+                    else if (tecla == '2') // pocion de vida
+                    {
+                        if (inven.getItemAmount(item2) == 0)
+                        {
+                            enemy.takeDamage((rand() % player.getStrength()) + 1);
+                        }
+                        else
+                        {
+                            item2.Consume(player);
+                            inven.removeItem(item2,1);
+                        }
+                    }
+                    else if (tecla == '3') // pocion de mana
+                    {
+                        if (inven.getItemAmount(item3) == 0)
+                        {
+                            enemy.takeDamage((rand() % player.getStrength()) + 1);
+                        }
+                        else
+                        {
+                            item3.Consume(player);
+                            inven.removeItem(item3,1);
+                        }
+                    }
+                    else if (tecla == '4') // fuerza
+                    {
+                        if (inven.getItemAmount(item4) == 0)
+                        {
+                            enemy.takeDamage((rand() % player.getStrength()) + 1);
+                        }
+                        else
+                        {
+                            item4.Consume(player);
+                            inven.removeItem(item4,1);
+                        }
+                    }
+                    else if (tecla == 'x') 
+                    {
+                        if (player.getMana() < 3)
+                        {
+                            enemy.takeDamage((rand() % player.getStrength()) + 1);
+                        }
+                        else
+                        {
+                            enemy.takeDamage((rand() % player.getIntellect()) + 1);
+                            player.increaseMana(-3);
+                        }
+                    }
+                    else if(tecla == 'c')
+                    {
+                       enemy.takeDamage((rand() % player.getStrength()) + 1);
+                    }
+                    else
+                    {
+                        continue;
+                    }
+
+                    isPlayerTurn = false;
+                    inCombat = (enemy.getCurrentHp() > 0 && player.getCurrentHP() > 0);
+                    player.printClass();
+                    pj.Gotoxy(3, 35);
+                    inven.printInventory();
+
+                }
+            }
+            if (player.getCurrentHP() == 0)
+            {
+                gameOver = true;
+            }
+            else
+            {
+                pj.cleanPj(92,5);
+                pj.cleanPj(3,28);
+                enemy = Enemy(rand() % 90 + 3, rand() % 25 + 4);
+                enemy.print();
+                player.gainEXP(10);
+                player.printClass();
+            }
+        }
         Sleep(30);
     }
 }
@@ -55,30 +186,40 @@ void Printpj::CursorHide()
 
 void Printpj::printPj()
 {
+    printPj(x,y);
+}
+
+void Printpj::printPj(int _x, int _y)
+{
     cleanPj();
-    Gotoxy(x,y);
+    Gotoxy(_x, _y);
     std::cout << "  O" << std::endl;
-    Gotoxy(x, y+1);
+    Gotoxy(_x, _y + 1);
     std::cout << " \\|/" << std::endl;
-    Gotoxy(x, y + 2);
+    Gotoxy(_x, _y + 2);
     std::cout << "  | " << std::endl;
-    Gotoxy(x, y + 3);
+    Gotoxy(_x, _y + 3);
     std::cout << " / \\ " << std::endl;
 }
 
 void Printpj::cleanPj()
 {
-    Gotoxy(x, y-1);
+    cleanPj(x,y);
+}
+
+void Printpj::cleanPj(int _x, int _y)
+{
+    Gotoxy(_x, _y - 1);
     std::cout << "     " << std::endl;
-    Gotoxy(x, y);
-    std::cout << "     " << std::endl; 
-    Gotoxy(x, y + 1); 
-    std::cout << "      " << std::endl; 
-    Gotoxy(x, y + 2); 
-    std::cout << "      " << std::endl; 
-    Gotoxy(x, y + 3); 
-    std::cout << "     " << std::endl; 
-    Gotoxy(x, y + 4);
+    Gotoxy(_x, _y);
+    std::cout << "     " << std::endl;
+    Gotoxy(_x, _y + 1);
+    std::cout << "      " << std::endl;
+    Gotoxy(_x, _y + 2);
+    std::cout << "      " << std::endl;
+    Gotoxy(_x, _y + 3);
+    std::cout << "     " << std::endl;
+    Gotoxy(_x, _y + 4);
     std::cout << "     " << std::endl;
 }
 
@@ -88,7 +229,7 @@ void Printpj::movePj()
     {
         char tecla = _getch();
         printPj();
-        if (tecla == left && x > 3)   --x;
+        if (tecla == left && x > 3 )   --x;
         if (tecla == right && x < 92)   ++x;
         if (tecla == up && y > 5 )   --y;
         if (tecla == down && y < 28)   ++y;
@@ -101,20 +242,31 @@ void Printpj::printLimit()
     {
         Gotoxy(i, 3);   printf("%c", 205);
         Gotoxy(i, 33);  printf("%c", 205);
+        Gotoxy(i, 38);  printf("%c", 205);
     }
-    for (int i = 4; i < 33; i++)
+    for (int i = 4; i < 38; i++)
     {
         Gotoxy(2, i);   printf("%c", 186);
-        Gotoxy(98, i); printf("%c", 186);
+        if (i<33)
+        {
+            Gotoxy(98, i); printf("%c", 186);
+        }
         Gotoxy(130,i);  printf("%c",186);
     }
 
     Gotoxy(2, 3);   printf("%c", 201);
-    Gotoxy(2, 33);  printf("%c", 200);
+    Gotoxy(2, 33);  printf("%c", 204);
+    Gotoxy(2, 38);  printf("%c", 200);
     Gotoxy(98, 3); printf("%c", 203);
     Gotoxy(98, 33);printf("%c", 202);
     Gotoxy(130, 3); printf("%c", 187);
     Gotoxy(130, 33); printf("%c", 188);
+    Gotoxy(130, 38); printf("%c", 188);
+}
+
+std::pair<int, int> Printpj::GetCoordinates()
+{
+    return std::make_pair(x,y);
 }
 
 static int get_int(void) 
@@ -166,17 +318,12 @@ void Menu()
 
 void NuevaPartida()
 {
-    int x = rand() % 130 + 3, y = rand() % 33 + 2;
     int opcion;
     Player knight(new Warrior());
     Player mage(new Mage());
     Player elf(new Elf());
-    Enemy enemy;
-    
-    
     do
     {
-
         std::cout << "\n\n\t\t\tELIJA UN PERSONAJE" << std::endl;
         std::cout << "\t\t\t------------------------" << std::endl;
         std::cout << "\n\t1. Caballero" << std::endl;
@@ -190,21 +337,28 @@ void NuevaPartida()
         case 1:
             system("cls");
             knight.printClass();
-            enemy.print();
-            Print();
+            Print(knight);
+            opcion = 4;
+            system("cls");
+            std::cout << "Moriste" << std::endl;
+            _getch();
             break;
         case 2:
             system("cls");
             mage.printClass();
-            enemy.print();
-            Print();
+            Print(mage);
+            opcion = 4;
+            system("cls");
+            _getch();
             break;
 
         case 3:
             system("cls");
             elf.printClass();
-            enemy.print();  
-            Print();
+            Print(elf);
+            opcion = 4;
+            system("cls");
+            _getch();
             break;
 
         case 4:
@@ -217,6 +371,18 @@ void NuevaPartida()
 
         }
     } while (opcion != 4);
+}
+
+bool IsColliding(std::pair<int, int> player, std::pair<int, int> enemy)
+{ 
+
+    int x = player.first;
+    int y = player.second;
+    int eneX = enemy.first;
+    int eneY = enemy.second;
+    bool isCollidingX = (x >= eneX - 3 && x <= eneX + 3);
+    bool isCollidingY = (y >= eneY - 2 && y <= eneY + 2);
+    return isCollidingX && isCollidingY;
 }
 
 

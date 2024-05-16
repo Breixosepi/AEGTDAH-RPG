@@ -1,4 +1,6 @@
 #include "../include/Inventory.hpp"
+#include "../include/Utilities.hpp"
+
 
 Inventory::Inventory()
 {
@@ -29,14 +31,26 @@ void Inventory::removeItem(const Item& item, int amount)
     }
 }
 
+int Inventory::getItemAmount(Item& item)
+{
+    return items[item];
+}
+
 void Inventory::printInventory()
 {
     for (auto& pair: items) 
     {
-        std::cout<<""<<std::endl;
-        std::cout << "Item: " << pair.first.GetName() << " tipo: " << (int)pair.first.GetType() << std::endl;
-        std::cout << " Description: " << pair.first.GetDescription()<< std::endl;
-        std::cout << "Cantidad: " << pair.second << std::endl;
+        std::cout << "Item: " << pair.first.GetName() <<"\t\t";
+    }
+    std::cout<<std::endl;
+    for (auto& pair : items)
+    {
+        std::cout << "   Description: " << pair.first.GetDescription()<<"\t";
+    }
+    std::cout << std::endl;
+    for (auto& pair : items)
+    {
+        std::cout << "   Cantidad: " << pair.second<<"\t\t\t";
     }
 }
 

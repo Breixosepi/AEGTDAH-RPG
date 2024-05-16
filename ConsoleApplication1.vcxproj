@@ -129,25 +129,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aegtdahrpg.cpp" />
-    <ClCompile Include="source\lib\src\Ability.cpp" />
     <ClCompile Include="source\lib\src\Enemy.cpp" />
     <ClCompile Include="source\lib\src\Hp.cpp" />
     <ClCompile Include="source\lib\src\Inventory.cpp" />
     <ClCompile Include="source\lib\src\Item.cpp" />
     <ClCompile Include="source\lib\src\LevelUp.cpp" />
-    <ClCompile Include="source\lib\src\Logic.cpp" />
     <ClCompile Include="source\lib\src\Player.cpp" />
     <ClCompile Include="source\lib\src\Stats.cpp" />
     <ClCompile Include="source\lib\src\Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\lib\include\Ability.hpp" />
     <ClInclude Include="source\lib\include\Enemy.hpp" />
     <ClInclude Include="source\lib\include\Hp.hpp" />
     <ClInclude Include="source\lib\include\Inventory.hpp" />
     <ClInclude Include="source\lib\include\Item.hpp" />
     <ClInclude Include="source\lib\include\LevelUp.hpp" />
-    <ClInclude Include="source\lib\include\Logic.hpp" />
     <ClInclude Include="source\lib\include\Player.hpp" />
     <ClInclude Include="source\lib\include\Stats.hpp" />
     <ClInclude Include="source\lib\include\Utilities.hpp" />

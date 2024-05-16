@@ -18,9 +18,6 @@
     <ClCompile Include="aegtdahrpg.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="source\lib\src\Ability.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="source\lib\src\Hp.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -31,9 +28,6 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="source\lib\src\LevelUp.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="source\lib\src\Logic.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="source\lib\src\Player.cpp">
@@ -50,9 +44,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\lib\include\Ability.hpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="source\lib\include\Hp.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -63,9 +54,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="source\lib\include\LevelUp.hpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="source\lib\include\Logic.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="source\lib\include\Player.hpp">

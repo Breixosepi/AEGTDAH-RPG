@@ -3,7 +3,10 @@
 #include <windows.h>
 #include <conio.h>
 #include <stdio.h>
+#include <utility>
 
+class Item;
+class Enemy;
 class Player;
 using hptype = std::uint16_t;
 using statstype = std::uint16_t;
@@ -31,9 +34,12 @@ public:
     void Gotoxy(int x, int y);
     void CursorHide();
 	void printPj();
+	void printPj(int _x, int _y);
 	void cleanPj();
+	void cleanPj(int _x, int _y);
 	void movePj();
 	void printLimit();
+	std::pair<int, int>GetCoordinates();
 private:
 	int x, y;
 };

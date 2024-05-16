@@ -18,34 +18,26 @@ void Item::Consume(Player& ply)
 
 	if (type == ItemType::HpPotion)
 	{
-		if (ply.getCurrentHP() == ply.getMaxHP())
-		{
-			std::cout << "su vida ya esta al maximo" << std::endl;
-			return;
-		}
 		ply.heal(5);
-		std::cout << "su vida actual es de : " << ply.getCurrentHP() << std::endl;
 	}	
 	else if (type == ItemType::MpPotion)
 	{
 		if (ply.getClassName()== "Warrior")
 		{
-			std::cout << "Los guerreros no poseen mana" << std::endl;
+			return;
 		}
 		else
 		{
 			ply.increaseMana(2);
-			std::cout << "su Mana actual es de : " << ply.getMana() << std::endl;
 		}
 	}
 	else if (type == ItemType::StrPotion)
 	{
 		ply.increaseStrength(2);
-		std::cout << "su fuerza actual es de: " << ply.getStrength() << std::endl;
 	}
 	else if (type == ItemType::Explosive)
 	{
-		std::cout << "en desarrollo" << std::endl;
+		ply.takeDamage(3);
 	}
 }
 
